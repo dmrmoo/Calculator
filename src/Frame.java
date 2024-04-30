@@ -10,10 +10,13 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
 public class Frame extends JFrame{
+    public static translate translate = new translate();
+    public static JLabel label = new JLabel("0",SwingConstants.CENTER);
+
+    
      //SIZE
     public int width = 200;
     public int height = 250;
-    JLabel label = new JLabel("0",SwingConstants.CENTER);
     KeyInputs inputs = new KeyInputs();
     JPanel panel = new JPanel();
     public Frame(){
@@ -35,6 +38,52 @@ public class Frame extends JFrame{
         JButton zero = new JButton("0");
         JButton equals = new JButton("=");
         //add button effects
+        one.addActionListener(e -> {
+            translate.calculate("1");
+        });
+        two.addActionListener(e -> {
+            translate.calculate("2");
+        });
+        three.addActionListener(e -> {
+            translate.calculate("3");
+        });
+        four.addActionListener(e -> {
+            translate.calculate("4");
+        });
+        five.addActionListener(e -> {
+            translate.calculate("5");
+        });
+        six.addActionListener(e -> {
+            translate.calculate("6");
+        });
+        seven.addActionListener(e -> {
+            translate.calculate("7");
+        });
+        eight.addActionListener(e -> {
+            translate.calculate("8");
+        });
+        nine.addActionListener(e -> {
+            translate.calculate("9");
+        });
+        zero.addActionListener(e -> {
+            translate.calculate("0");
+        });
+        plus.addActionListener(e -> {
+            translate.calculate("+");
+        });
+        minus.addActionListener(e -> {
+            translate.calculate("-");
+        });
+        divide.addActionListener(e -> {
+            translate.calculate("/");
+        });
+        multiply.addActionListener(e -> {
+            translate.calculate("*");
+        });
+        equals.addActionListener(e -> {
+            System.out.println(translate.ans());
+            Frame.relabel();
+        });
 
 
         
@@ -74,13 +123,10 @@ public class Frame extends JFrame{
     }
 
     public static void relabel() {
-        //label.setText(KeyInputs.ans);
-        System.out.println(KeyInputs.ans);
+        double result = translate.ans();
+        label.setText(String.valueOf(result));
+
     }
 
-    public static void calculate() {
-        // turn string to math equation and calculate
-        int equation = 0;
-        System.out.println(equation);
-    }
+
 }

@@ -38,7 +38,8 @@ public class KeyInputs implements KeyListener{
                 Frame.relabel();
                 break;
             case KeyEvent.VK_6:
-                ans+="6";                Frame.relabel();
+                ans+="6";                
+                Frame.relabel();
                 break;
             case KeyEvent.VK_7:
                 ans+="7";
@@ -69,7 +70,13 @@ public class KeyInputs implements KeyListener{
                 Frame.relabel();
                 break;
             case KeyEvent.VK_EQUALS:
-                Frame.calculate();
+                ans+="+";
+                break;
+            case KeyEvent.VK_ENTER:
+                ans+=" ";
+                break;
+            case KeyEvent.VK_SPACE:
+                ans+=" ";
                 break;
         }
     }
