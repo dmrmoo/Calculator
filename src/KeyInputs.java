@@ -1,9 +1,9 @@
-import java.awt.event.KeyEvent;
+/*import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 public class KeyInputs implements KeyListener{
-    /* 
+    
      * Frame frame = new Frame();
-    */
+    
     public static String ans = "";
     @Override
     public void keyTyped(KeyEvent e) {
@@ -87,4 +87,4 @@ public class KeyInputs implements KeyListener{
 
         }
 
-}
+} */
