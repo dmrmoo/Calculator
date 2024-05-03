@@ -17,7 +17,6 @@ public class Frame extends JFrame{
      //SIZE
     public int width = 200;
     public int height = 200;
-    //KeyInputs inputs = new KeyInputs();
     JPanel panel = new JPanel();
 
 
@@ -93,26 +92,26 @@ public class Frame extends JFrame{
         });
         plus.addActionListener(e -> {
             translate.calculate("+");
-            equation("+");
+            equation(" + ");
             label.setText(equation);
         });
         minus.addActionListener(e -> {
             translate.calculate("-");
-            equation("-");
+            equation(" - ");
             label.setText(equation);
         });
         divide.addActionListener(e -> {
             translate.calculate("/");
-            equation("/");
+            equation(" / ");
             label.setText(equation);
         });
         multiply.addActionListener(e -> {
             translate.calculate("*");
-            equation("*");
+            equation(" * ");
             label.setText(equation);
         });
         equals.addActionListener(e -> {
-            equation("= ");
+            equation(" = ");
             label.setText(equation+translate.ans());
             equation="";
         });
@@ -141,7 +140,6 @@ public class Frame extends JFrame{
 
         ImageIcon image = new ImageIcon("C:\\coding\\java\\Calculator\\calc.jpg");
         label.setIcon(null);
-        //this.addKeyListener(inputs);
         this.setPreferredSize(new Dimension(width,height));
         this.setFocusable(true);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
